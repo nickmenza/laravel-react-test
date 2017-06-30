@@ -30,4 +30,8 @@ class HomeController extends Controller
 
         return view('fontend.home');
     }
+
+    public function table(){
+        return view('fontend.table');
+    }
 }

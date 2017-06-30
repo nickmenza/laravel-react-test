@@ -386,8 +386,6 @@ class Calendar extends Component {
 
 
 
-
-
 export default Example;
 
 if (document.getElementById('example')) {
