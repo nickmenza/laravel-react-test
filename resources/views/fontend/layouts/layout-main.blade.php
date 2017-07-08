@@ -15,7 +15,8 @@
         <link href='/global/fullcalendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
         <!---->
         <link href='/css/app.css' rel='stylesheet' />
-
+        <!--animate-->
+        <link href='/global/animate/animate.min.css' rel='stylesheet' />
         
         <script>
         window.Laravel = <?php echo json_encode([

@@ -14,7 +14,7 @@
 
 
 Route::get('{slug}', 'Frontend\HomeController@index')
-->where('slug', '(?!api)(?!_admin)([A-z\d-\/_.]+)?');
+->where('slug', '(?!api)(?!global)(?!_admin)([A-z\d-\/_.]+)?');
 
 Route::get('_admin', function() {
     return "admin page";
