@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/test', 'HomeController@index');
-Route::get('/test1', 'HomeController@table');
+
+Route::get('{slug}', 'Frontend\HomeController@index')
+->where('slug', '(?!api)(?!_admin)([A-z\d-\/_.]+)?');
+
+Route::get('_admin', function() {
+    return "admin page";
+});

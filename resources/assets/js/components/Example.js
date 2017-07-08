@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
- 
+
 
 class Example extends Component {
     constructor(props) {
@@ -388,6 +388,6 @@ class Calendar extends Component {
 
 export default Example;
 
-if (document.getElementById('example')) {
-    ReactDOM.render(<Example />, document.getElementById('example'));
-}
+// if (document.getElementById('react-code')) {
+//     ReactDOM.render(<Example />, document.getElementById('react-code'));
+// }

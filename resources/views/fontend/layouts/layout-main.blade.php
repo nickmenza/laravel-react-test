@@ -24,11 +24,8 @@
     </script>
     </head>
     <body>
-        @yield('header')
-        <div class="container">
-             @yield('content')
-        </div>
-        @yield('footer')
+        
+        @yield('content')
     
         <script src='/global/jquery/jquery-3.2.1.min.js'></script>
         <script src='/global/fullcalendar/lib/moment.min.js'></script>
