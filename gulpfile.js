@@ -4,7 +4,7 @@ require('laravel-elixir-webpack-react');
 require('laravel-elixir-livereload');
 
 elixir(mix => {
-    mix.sass('app.scss')
+    mix.sass('*.scss')
        .webpack('app.js')
        .livereload();
         

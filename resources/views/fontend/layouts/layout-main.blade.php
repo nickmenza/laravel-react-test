@@ -18,6 +18,8 @@
         <!--animate-->
         <link href='/global/animate/animate.min.css' rel='stylesheet' />
         
+        <!--fontawesome-->
+        <link href='/global/fontawesome/css/font-awesome.min.css' rel='stylesheet' />
         <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),

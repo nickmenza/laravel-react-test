@@ -4,6 +4,7 @@ import createBrowserHistory from 'history/createBrowserHistory'
 import Example from './components/Example'
 import Home from './components/home/home'
 import Home1 from './components/home/home1'
+import Login from './components/login/login'
 // import browserHistory from 'react-router-dom/lib/browserHistory';
 
 class Routes extends Component {
@@ -20,8 +21,9 @@ class Routes extends Component {
                 <Router history={history}>
                     <Switch>
                     <Route exact path="/" component={Example}/>
-                    <Route exact path="/home" component={Home}/>
-                    <Route exact path="/home1" component={Home1}/>
+                    <Route path="/login" component={Login}/>
+                    <Route path="/home" component={Home}/>
+                    <Route path="/home1" component={Home1}/>
                     <Route path="*" component={NoMatch} />
                     </Switch>
                 </Router>

@@ -4,7 +4,7 @@ import Routes from './routes'
 import {Provider} from "react-redux";
 import {createStore, combineReducers, applyMiddleware} from "redux"
 import registerServiceWorker from './registerServiceWorker';
-
+import cookie from 'react-cookies';
 var value = {
     name :'hello nick'
 }
@@ -12,10 +12,25 @@ var value = {
 const test1 =(state=value,action)=>{
     switch (action.type) {
         case "SET":
-        state  = action.name
+        state  = {name:action.name}
+        break;
+        case "GET":
+        
+        break;
     }
     
-   
+    return state
+}
+
+const user = (state=cookie.load('user'),action)=>{
+    
+    switch (action.type) {
+        case "SET_USER":
+        state  = action.user
+        cookie.save('user', action.user , { path: '/' })
+        break;
+        
+    }
     return state
 }
 
@@ -26,7 +41,7 @@ const mylogger=(store)=>(next)=>(action)=>{
 
 
 
-const store = createStore(combineReducers({test1:test1}),{},applyMiddleware(mylogger))
+const store = createStore(combineReducers({test1:test1,user:user}),{},applyMiddleware(mylogger))
 
 
 ReactDOM.render(
