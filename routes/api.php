@@ -19,6 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/user', function (Request $request) {
     $user = DB::table('user')->get();
+    // $user = "test";
     return $user;
 });
 

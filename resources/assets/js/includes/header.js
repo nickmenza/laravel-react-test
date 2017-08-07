@@ -53,7 +53,7 @@ class Header extends Component {
         
          return(
                      
-                <nav className="navbar navbar-toggleable-md navbar-light fixed-top" style={{backgroundColor: '#e3f2fd'}}>
+                <nav className="navbar navbar-toggleable-md navbar-light fixed-top" style={{backgroundColor: '#e3f2fd'}} id="header">
                 <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

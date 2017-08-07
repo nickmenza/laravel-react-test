@@ -21,6 +21,10 @@ class Login extends Component {
     componentWillMount(){
         console.log(this)
        $('body').css('background','#673ab7')
+       let {user} = this.props
+       if(user.id){
+             this.props.history.push('/home')
+        }
     }
     
     submit(e){
@@ -32,8 +36,9 @@ class Login extends Component {
         axios.post('api/login',self.state.user).then(function(response,re){
             console.log('login',response.data.data)
             if(response.data.status ===200){
-                self.props.SET_USER(response.data.data)
                 $('body').css('background','')
+                self.props.SET_USER(response.data.data)
+               
                 self.props.history.push('/home')
             }else{
                 alert("Username or Password incorrect")
@@ -58,11 +63,8 @@ class Login extends Component {
     }
 
      render(){
-         let {user} = this.props
          let {loading} = this.state
-         if(user.id){
-             this.props.history.push('/home')
-         }
+         
          return(
             <Layout active="">
             <div className="col-md-12">

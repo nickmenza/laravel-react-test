@@ -13,9 +13,21 @@
 
 
 
-Route::get('{slug}', 'Frontend\HomeController@index')
-->where('slug', '(?!api)(?!global)(?!_admin)([A-z\d-\/_.]+)?');
+// Route::get('{slug}', 'Frontend\HomeController@index')
+// ->where('slug', '(?!api)(?!global)(?!images)(?!test)(?!_admin)([A-z\d-\/_.]+)?');
+
+
 
 Route::get('_admin', function() {
     return "admin page";
 });
+
+
+Route::get('/chat', function(){
+    // echo 'chat';
+    return view('chat');
+});
+
+Route::get('/test', 'TestController@test');
+
+Route::get('/test_print', 'TestController@test_print');
